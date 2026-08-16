@@ -1,0 +1,87 @@
+================================================================
+  JEZZ BAKERY MANAGEMENT SYSTEM — LOGIN CREDENTIALS
+================================================================
+
+  Developed by : Bernard Mwangi
+  Project      : Jezz Bakery Management System
+  Repository   : https://github.com/ben-can-code/jezz-bakery
+  Platform     : PHP / MySQL (XAMPP)
+  Date         : 2026
+
+================================================================
+  DEFAULT USER ACCOUNTS
+================================================================
+
+  ┌─────────────────┬──────────────┬──────────────┬───────────────┐
+  │  Full Name      │  Username    │  Password    │  Role         │
+  ├─────────────────┼──────────────┼──────────────┼───────────────┤
+  │  Administrator  │  admin       │  admin123    │  Administrator│
+  │  Claire Blake   │  cblake      │  cblake      │  Cashier      │
+  │  Mark Cooper    │  mcooper     │  mcooper     │  Administrator│
+  └─────────────────┴──────────────┴──────────────┴───────────────┘
+
+================================================================
+  ROLE PERMISSIONS
+================================================================
+
+  ADMINISTRATOR
+  -------------
+  - Full access to all modules
+  - Manage Products (add, edit, delete)
+  - Manage Stock levels
+  - Manage Users (create, edit, delete)
+  - View & clear Activity Logs
+  - View & clear Login Attempt Logs
+  - Access Maintenance (Categories)
+  - View Sales Reports (all users)
+  - Process POS transactions
+
+  CASHIER (Staff)
+  ---------------
+  - Process POS transactions
+  - View own Sales Reports
+  - Access Dashboard (limited view)
+
+================================================================
+  HOW TO LOG IN
+================================================================
+
+  1. Open your browser and go to:
+     http://localhost/jezz%20bakery%20managment%20system/
+
+  2. On the login page, click the role tab:
+     - "Cashier"       → pre-fills cblake / cblake
+     - "Administrator" → pre-fills admin (enter password manually)
+
+  3. Click "Let's Go!" to sign in.
+
+================================================================
+  DATABASE SETUP
+================================================================
+
+  Database Name : bsms_db
+  Host          : localhost
+  Username      : root
+  Password      : (empty)
+
+  Import file   : database/bsms_db.sql  (via phpMyAdmin)
+
+================================================================
+  DEVELOPER NOTES
+================================================================
+
+  - Passwords are stored as MD5 hashes in the database.
+  - Activity logs are recorded for every user action.
+  - Login attempts (success & failed) are tracked in login_log.
+  - Product codes are auto-generated based on category prefix.
+  - Product images are loaded via URL (paste any image link).
+
+================================================================
+  SUPPORT
+================================================================
+
+  Developer  : Bernard Mwangi
+  GitHub     : https://github.com/ben-can-code
+  Repo       : https://github.com/ben-can-code/jezz-bakery
+
+================================================================

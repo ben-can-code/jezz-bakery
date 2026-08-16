@@ -1,0 +1,27 @@
+# ── Sensitive & environment files ────────────────────────────
+DBConnection.php
+.env
+*.env
+
+# ── One-time setup / patch scripts ───────────────────────────
+setup_features.php
+add_image_col.php
+apply_patch.php
+
+# ── XAMPP / server logs ───────────────────────────────────────
+*.log
+error_log
+
+# ── OS junk ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor / IDE ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Node (if ever used) ───────────────────────────────────────
+node_modules/
