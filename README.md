@@ -24,36 +24,51 @@ Jezz Bakery Management System is a web-based application designed for small to m
 
 ## 🖥️ Screenshots
 
-> **Note:** Add your screenshot images to the `screenshots/` folder in this repo.  
-> Name them exactly as listed below and they will appear here automatically.
+### 🔐 Login — Pastel Bakery Design
+![Login Pastel](screenshots/login_pastel_bakery.png)
+> Charming pastel login with role tabs (Cashier / Administrator), floating bakery doodles, pastel gradient title, credential hints, and the real bakery wallpaper background.
 
-### 🔐 Login Page
-![Login Page](screenshots/login.png)
-> Charming hand-drawn style login with role tabs (Cashier / Administrator), floating bakery doodles, pastel gradient title on the real bakery wallpaper.
+---
+
+### 🔐 Login — Clean Orange Tabs
+![Login Tabs](screenshots/login_tabs_orange.png)
+> Clean orange-themed login with Cashier / Administrator role tabs and password visibility toggle.
 
 ---
 
 ### 🏠 Dashboard
-![Dashboard](screenshots/dashboard.png)
-> Summary cards: Categories, Products, Total Stock, Today's Sales. Stock availability table with low-stock restock alerts.
+![Dashboard](screenshots/dashboard_stock_overview.png)
+> Summary cards: Categories (10), Products (42), Total Stock, Today's Sales. Full stock availability table with low-stock restock alerts.
 
 ---
 
-### 📦 Products
-![Products](screenshots/products.png)
-> Product list with image thumbnails, auto-generated product codes, category, price, restock alert, and status badges.
+### 📦 Products List
+![Products](screenshots/products_list_with_images.png)
+> Product list with image thumbnails, auto-generated product codes by category prefix, English descriptions, price, restock alert, and status badges.
 
 ---
 
-### 🏪 Point of Sale (POS)
-![POS](screenshots/pos.png)
-> Cashier-friendly transaction screen — search products, add to cart, view live totals.
+### ➕ Add Product — Image Preview
+![Add Product Image](screenshots/add_product_image_preview.png)
+> Add New Product modal with live image URL preview — paste any image link and see the product photo instantly.
 
 ---
 
-### 🧾 POS — Live Transaction
-![POS Transaction](screenshots/pos_transaction.png)
-> Cart updating in real-time with sub-total, 12% tax, tendered amount, and change calculation.
+### ➕ Add Product — Auto Code
+![Add Product Code](screenshots/add_product_auto_code.png)
+> Product code is automatically generated when a category is selected (e.g. Breads → BRD-006). Can be unlocked to edit manually.
+
+---
+
+### 🏪 POS — Empty Cart
+![POS Empty](screenshots/pos_transaction_empty.png)
+> Cashier-friendly transaction screen — full product list with category, code, name, price, and available quantity.
+
+---
+
+### 🏪 POS — Items in Cart
+![POS Cart](screenshots/pos_transaction_with_items.png)
+> Cart with multiple items, live sub-total, 12% inclusive tax, and change calculation ready for checkout.
 
 ---
 
@@ -64,56 +79,32 @@ Jezz Bakery Management System is a web-based application designed for small to m
 ---
 
 ### 🧾 Receipt
-![Receipt](screenshots/receipt.png)
-> Clean printable receipt with transaction date, receipt number, line items, subtotal, 12% tax, tendered amount and change.
+![Receipt](screenshots/receipt_modal.png)
+> Clean printable receipt with transaction date, receipt number, line items, subtotal, 12% tax, tendered amount, and change.
 
 ---
 
 ### 👥 Users & Logs — Users Tab
-![Users](screenshots/users.png)
-> User management with role badges, status, action count badges, and per-user activity viewer.
+![Users](screenshots/users_logs_users_tab.png)
+> User management with role badges, status, logged action counts, and protected admin account.
 
 ---
 
 ### 📋 Activity Log
-![Activity Log](screenshots/activity_log.png)
+![Activity Log](screenshots/users_logs_activity_log.png)
 > Every action logged: login, logout, create, update, delete — with user name, role, IP address, and timestamp.
 
 ---
 
 ### 🚨 Login Attempts
-![Login Attempts](screenshots/login_attempts.png)
+![Login Attempts](screenshots/users_logs_login_attempts.png)
 > Full login attempt history — failed attempts highlighted in red, browser/device detected, IP and timestamp recorded.
 
 ---
 
 ### 🛠️ Maintenance
-![Maintenance](screenshots/maintenance.png)
-> Category management — add, edit, delete, toggle active/inactive status.
-
----
-
-## 📸 How to Add Screenshots
-
-1. Take screenshots of each page running on your localhost
-2. Save them into the `screenshots/` folder with these exact filenames:
-
-```
-screenshots/
-├── login.png
-├── dashboard.png
-├── products.png
-├── pos.png
-├── pos_transaction.png
-├── sales_report.png
-├── receipt.png
-├── users.png
-├── activity_log.png
-├── login_attempts.png
-└── maintenance.png
-```
-
-3. `git add screenshots/` → `git commit` → `git push` — images appear in the README automatically.
+![Maintenance](screenshots/maintenance_categories.png)
+> Category management — 10 real bakery categories, add, edit, delete, toggle active/inactive status.
 
 ---
 

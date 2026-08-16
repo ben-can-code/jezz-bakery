@@ -378,6 +378,45 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
             user-select: none;
         }
 
+        /* ── Credential hint box ─────────────────────────────── */
+        .cred-hint-box {
+            border-radius: 12px;
+            background: linear-gradient(135deg, #fff8f0, #fef3e8);
+            border: 1.5px dashed #fcd9a0;
+            padding: 0.55rem 0.85rem;
+            margin-bottom: 1rem;
+            transition: all 0.22s;
+        }
+        .hint-entry {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+        .hint-icon { font-size: 1.5rem; line-height: 1; }
+        .hint-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+        .hint-role {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #b45309;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .hint-cred {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #44403c;
+        }
+        .hint-cred b {
+            color: #ea580c;
+            background: rgba(251,146,60,0.12);
+            padding: 1px 5px;
+            border-radius: 4px;
+        }
+
         /* ── Alert messages ───────────────────────────────────── */
         .pop_msg {
             border-radius: 12px;
@@ -496,6 +535,24 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
                     </div>
                 </div>
 
+                <!-- Credential hint box -->
+                <div id="cred-hint" class="cred-hint-box">
+                    <div id="hint-cashier" class="hint-entry">
+                        <span class="hint-icon">🛒</span>
+                        <div class="hint-details">
+                            <span class="hint-role">Cashier Account</span>
+                            <span class="hint-cred"><i class="fas fa-user fa-xs"></i> <b>cblake</b> &nbsp;|&nbsp; <i class="fas fa-key fa-xs"></i> <b>cblake</b></span>
+                        </div>
+                    </div>
+                    <div id="hint-administrator" class="hint-entry" style="display:none">
+                        <span class="hint-icon">🛡️</span>
+                        <div class="hint-details">
+                            <span class="hint-role">Administrator Account</span>
+                            <span class="hint-cred"><i class="fas fa-user fa-xs"></i> <b>admin</b> &nbsp;|&nbsp; <i class="fas fa-key fa-xs"></i> <b>admin123</b></span>
+                        </div>
+                    </div>
+                </div>
+
                 <form action="" id="login-form">
                     <!-- Username -->
                     <div class="mb-2">
@@ -541,15 +598,22 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 <script>
     var roles = {
         cashier:       { username: 'cblake', password: 'cblake' },
-        administrator: { username: 'admin',  password: '' }
+        administrator: { username: 'admin',  password: 'admin123' }
     };
 
     function switchRole(role) {
+        // Update tab active states
         document.getElementById('tab-cashier').classList.toggle('active', role === 'cashier');
         document.getElementById('tab-administrator').classList.toggle('active', role === 'administrator');
+
+        // Pre-fill credentials
         $('#username').val(roles[role].username);
         $('#password').val(roles[role].password);
         $('#username').focus();
+
+        // Toggle credential hint
+        document.getElementById('hint-cashier').style.display       = (role === 'cashier')       ? 'flex' : 'none';
+        document.getElementById('hint-administrator').style.display  = (role === 'administrator') ? 'flex' : 'none';
     }
 
     function togglePassword() {
